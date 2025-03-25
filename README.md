@@ -1,4 +1,5 @@
 # MCP-MultilspyLSP
+[![smithery badge](https://smithery.ai/badge/@asimihsan/mcp-multilspy)](https://smithery.ai/server/@asimihsan/mcp-multilspy)
 
 An MCP server that exposes Language Server Protocol (LSP) capabilities through multilspy.
 
@@ -18,6 +19,15 @@ interfacing with various language servers.
 
 ## Installation
 
+### Installing via Smithery
+
+To install MCP Multilspy for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@asimihsan/mcp-multilspy):
+
+```bash
+npx -y @smithery/cli install @asimihsan/mcp-multilspy --client claude
+```
+
+### Manual Installation
 ```bash
 pip install mcp-multilspy
 ```
