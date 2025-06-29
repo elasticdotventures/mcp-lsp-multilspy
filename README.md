@@ -3,6 +3,9 @@
 
 An MCP server that exposes Language Server Protocol (LSP) capabilities through multilspy.
 
+## Author
+- Brian H. (brianh@elastic.ventures)
+
 ## What is this?
 
 This project provides an [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server that
@@ -29,7 +32,7 @@ npx -y @smithery/cli install @asimihsan/mcp-multilspy --client claude
 
 ### Manual Installation
 ```bash
-pip install mcp-multilspy
+uv pip install mcp-multilspy
 ```
 
 ## Usage
@@ -48,15 +51,34 @@ mcp install mcp-multilspy
 
 ## Supported Languages
 
-- Java (Eclipse JDTLS)
-- Python (jedi-language-server)
-- Rust (Rust Analyzer)
-- C# (OmniSharp/RazorSharp)
-- TypeScript (TypeScriptLanguageServer)
-- JavaScript (TypeScriptLanguageServer)
-- Go (gopls)
-- Dart (Dart Language Server)
-- Ruby (Solargraph)
+This fork is principally focused on Python, Rust, and TypeScript. While other languages are supported by the underlying `multilspy` library, they are not the focus of this fork. Pull requests for other languages are welcome.
+
+| Language | Actively Developed | Supported |
+|---|---|---|
+| Python | ✅ | ✅ |
+| Rust | ✅ | ✅ |
+| TypeScript | ✅ | ✅ |
+| Java | ❌ | ✅ |
+| C# | ❌ | ✅ |
+| JavaScript | ❌ | ✅ |
+| Go | ❌ | ✅ |
+| Dart | ❌ | ✅ |
+| Ruby | ❌ | ✅ |
+
+We will also be adding support for Docker, Terraform, and Tofu.
+
+## MCP Server Example
+
+```json
+{
+  "mcpServers": {
+    "mcp-lsp-multilspy": {
+      "command": "uvx",
+      "args": ["mcp-multilspy"],
+    }
+  }
+}
+```
 
 ## Example
 
