@@ -3,6 +3,8 @@
 
 An MCP server that exposes Language Server Protocol (LSP) capabilities through multilspy.
 
+
+
 ## What is this?
 
 This project provides an [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server that
@@ -24,12 +26,15 @@ interfacing with various language servers.
 To install MCP Multilspy for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@asimihsan/mcp-multilspy):
 
 ```bash
-npx -y @smithery/cli install @asimihsan/mcp-multilspy --client claude
+# claude
+npx -y @smithery/cli install @elasticdotventures/mcp-lsp-multilspy --client claude
+# roocode
+npx -y @smithery/cli install @elasticdotventures/mcp-lsp-multilspy --client roocode
 ```
 
 ### Manual Installation
 ```bash
-pip install mcp-multilspy
+uv pip install mcp-multilspy
 ```
 
 ## Usage
@@ -48,15 +53,34 @@ mcp install mcp-multilspy
 
 ## Supported Languages
 
-- Java (Eclipse JDTLS)
-- Python (jedi-language-server)
-- Rust (Rust Analyzer)
-- C# (OmniSharp/RazorSharp)
-- TypeScript (TypeScriptLanguageServer)
-- JavaScript (TypeScriptLanguageServer)
-- Go (gopls)
-- Dart (Dart Language Server)
-- Ruby (Solargraph)
+This fork is principally focused on Python, Rust, and TypeScript. While other languages are supported by the underlying `multilspy` library, they are not the focus of this fork. Pull requests for other languages are welcome.
+
+| Language | Actively Developed | Supported |
+|---|---|---|
+| Python | ✅ | ✅ |
+| Rust | ✅ | ✅ |
+| TypeScript | ✅ | ✅ |
+| Java | ❌ | ✅ |
+| C# | ❌ | ✅ |
+| JavaScript | ❌ | ✅ |
+| Go | ❌ | ✅ |
+| Dart | ❌ | ✅ |
+| Ruby | ❌ | ✅ |
+
+We will also be adding support for Docker, Terraform, and Tofu.
+
+## MCP Server Example
+
+```json
+{
+  "mcpServers": {
+    "mcp-lsp-multilspy": {
+      "command": "uvx",
+      "args": ["mcp-multilspy"],
+    }
+  }
+}
+```
 
 ## Example
 
