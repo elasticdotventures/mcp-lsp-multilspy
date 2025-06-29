@@ -1,25 +1,27 @@
 setup:
+    uv venv
+    uv sync
 
 test:
-    uvx pytest tests
+    uv run pytest tests
 
 lint:
-    uvx ruff check .
-    uvx ruff format --check .
-    uvx pyright
+    uv run ruff check .
+    uv run ruff format --check .
+    uv run pyright
 
 lint-fix:
-    uvx ruff check . --fix
-    uvx ruff format .
+    uv run ruff check . --fix
+    uv run ruff format .
 
 run:
-    uv run mcp-multilspy
+    uv run python -m mcp_multilspy
 
 dev:
-    uvx mcp dev -m mcp_multilspy
+    uv run mcp dev -m mcp_multilspy
 
 install:
-    uvx mcp install -m mcp_multilspy
+    uv run mcp install -m mcp_multilspy
 
 clean:
     rm -rf .venv target dist *.egg-info

@@ -8,8 +8,3 @@ wheels/
 
 # Virtual environments
 .venv
-
-# Untracked files
-.envrc
-AGENTS.md
-logs/
