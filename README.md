@@ -3,8 +3,6 @@
 
 An MCP server that exposes Language Server Protocol (LSP) capabilities through multilspy.
 
-## Author
-- Brian H. (brianh@elastic.ventures)
 
 ## What is this?
 
