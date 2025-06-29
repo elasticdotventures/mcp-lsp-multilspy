@@ -1,5 +1,5 @@
 # MCP-MultilspyLSP
-[![smithery badge](https://smithery.ai/badge/@asimihsan/mcp-multilspy)](https://smithery.ai/server/@asimihsan/mcp-multilspy)
+[![smithery # badge](https://smithery.ai/badge/@elasticdotventures/mcp-lsp-multilspy)](https://smithery.ai/server/@elasticdotventures/mcp-lsp-multilspy)
 
 An MCP server that exposes Language Server Protocol (LSP) capabilities through multilspy.
 
