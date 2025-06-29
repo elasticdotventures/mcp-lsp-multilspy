@@ -4,6 +4,7 @@
 An MCP server that exposes Language Server Protocol (LSP) capabilities through multilspy.
 
 
+
 ## What is this?
 
 This project provides an [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server that
@@ -25,7 +26,10 @@ interfacing with various language servers.
 To install MCP Multilspy for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@asimihsan/mcp-multilspy):
 
 ```bash
-npx -y @smithery/cli install @asimihsan/mcp-multilspy --client claude
+# claude
+npx -y @smithery/cli install @elasticdotventures/mcp-lsp-multilspy --client claude
+# roocode
+npx -y @smithery/cli install @elasticdotventures/mcp-lsp-multilspy --client roocode
 ```
 
 ### Manual Installation
